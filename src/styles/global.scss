@@ -1,0 +1,239 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "../node_modules/bootstrap/scss/bootstrap";
+
+// @import "~node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+// @import "~node_modules/bootstrap/scss/functions";
+// @import "~bootstrap/scss/bootstrap";
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.min.css';
+@import '../../static/fonts.scss';
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--secondary-light);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary-dark);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+}
+html,body{
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto','Open Sans','Urbanist', sans-serif;
+  position: relative;
+  font-weight: 500;
+  // overflow: hidden;
+  
+
+  --bs-body-font-size: 1.5rem;
+  // CSS VARIABLE
+  // PRIMARY
+  --primary-color: #00c5a8;
+  --primary-background-color: #daf8f2;
+  --secondary-color: rgba(85,85,85,.6);
+  --secondary-background-color: #f8f8f8;
+  --thirt-color: #ea7e00;
+  --four-color: #252552;
+  --five-color: #ff5c00;
+  --six-color: #003b5a;
+
+  --primary: rgb(106, 117, 155);
+  --primary-raw: 106, 117, 155;
+  --primary-light: rgb(119, 125, 145);
+  --primary-light-raw: 119, 125, 145;
+  --primary-dark: rgb(33, 39, 61);
+  --primary-dark-raw: 33, 39, 61;
+  --primary-accent: rgb(241, 246, 248);
+  --primary-accent-raw: 241, 246, 248;
+  --primary-text-color: whitesmoke;
+  // SECONDARY
+  --secondary: rgb(255, 255, 255);
+  --secondary-light: rgb(230, 230, 230);
+  --secondary-dark: rgb(99, 99, 99);
+  --secondary-text-color: #1f1f1f;
+  // THIRD
+  --third-light: rgba(0, 42, 105, 0.25);
+  --third-light-raw: 0, 42, 105, 0.25;
+  --third-rare: rgba(0, 42, 105, 0.5);
+  --third-rare-raw: 0, 42, 105, 0.5;
+  --third-medium: rgba(0, 42, 105, 0.75);
+  --third-medium-raw: 0, 42, 105, 0.75;
+  --third-medium-rare: rgba(0, 42, 105, 0.25);
+  --third-medium-rare-raw: 0, 42, 105, 0.25;
+  --third-dark: rgba(0, 42, 105, 0.9);
+  --third-dark-raw: 0, 42, 105, 0.9;
+
+  --third-text-color: rgb(110, 123, 217);
+  --third-dark-background-color: #1f273a;
+  // TRANSPARENT
+  --primary-transparent: rgba(8, 158, 238, 0.6);
+  --primary-dark-transparent: rgba(24, 24, 24, 0.5);
+  --secondary-light-transparent: rgba(230, 230, 230, 0.5);
+  // SHADOW
+  --primary-shadow-color: rgba(255, 255, 255, 0.4);
+  --secondary-shadow-color: rgb(196, 243, 237);
+  --glass-shadow-color: rgba(0, 42, 105, 0.5);
+
+  // BORDER-COLOR
+  --border-color-primary: rgb(49, 49, 49);
+
+  // SUCCESS
+  --app-button-primary-bg-color: var(--primary);
+  --app-button-primary-text-color: #fff;
+
+  --app-button-sucess-bg-color: #03f9a3;
+  --app-button-sucess-text-color: #fff;
+
+  --app-button-danger-bg-color: #f03232;
+  --app-button-danger-text-color: #fff;
+
+  --app-button-warning-bg-color: #ffbb00;
+  --app-button-warning-text-color: #fff;
+
+  &.darkmode {
+    --primary: rgba(49, 49, 49, 0.5);
+    --primary-raw: 49, 49, 49;
+    --primary-light: rgb(109, 109, 109);
+    --primary-light-raw: 109, 109, 109;
+    --primary-dark: rgb(42, 42, 43);
+    --primary-dark-raw: 42, 42, 43;
+    --primary-text-color: whitesmoke;
+    // SECONDARY
+    --secondary: rgba(49, 49, 49, 0.466);
+    --secondary-light: rgba(51, 51, 51, 0.521);
+    --secondary-dark: rgb(99, 99, 99);
+    // THIRD
+    --third-light: rgba(100, 100, 100, 0.25);
+    --third-light-raw: 100, 100, 100, 0.25;
+    --third-rare: rgba(75, 75, 75, 0.5);
+    --third-rare-raw: 75, 75, 75, 0.5;
+    --third-medium: rgba(59, 59, 59, 0.75);
+    --third-medium-raw: 59, 59, 59, 0.75;
+    --third-medium-rare: rgba(49, 49, 49, 0.25);
+    --third-medium-rare-raw: 49, 49, 49, 0.25;
+    --third-dark: rgba(29, 29, 29, 0.9);
+    --third-dark-raw: 29, 29, 29, 0.9;
+
+    --third-text-color: rgb(243, 243, 243);
+    --third-dark-background-color: #2e2e2e;
+    // TRANSPARENT
+    --primary-transparent: rgba(211, 211, 211, 0.6);
+    --primary-dark-transparent: rgba(167, 167, 167, 0.5);
+    --secondary-light-transparent: rgba(230, 230, 230, 0.5);
+    // SHADOW
+    --primary-shadow-color: rgba(255, 255, 255, 0.4);
+    --secondary-shadow-color: rgb(196, 243, 237);
+    --glass-shadow-color: rgba(255, 255, 255, 0.705);
+  }
+
+}
+.container {
+  overflow: hidden;
+}
+
+.children{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/images/map-2.png);
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  opacity: 0.4;
+}
+p{
+  font-size: 1.8rem;
+}
+.section-title {
+  text-align: left;
+  // font-family: "Urbanist";
+  .subtitle {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      line-height: 1.5;
+      color: #003b5a;
+      font-weight: bold;
+  }
+  .title {
+      font-size: 5rem;
+      text-transform: capitalize;
+      color: #003b5a;
+      font-weight: bold;
+      span {
+          position: relative;
+          z-index: 1;
+          &::after {
+              content: "";
+              position: absolute;
+              left: -0.2rem;
+              bottom: -0.6rem;
+              z-index: -1;
+              height: 2.9rem;
+              width: 23.7rem;
+              background-image: url(../assets/images/underline.png);
+              background-repeat: no-repeat;
+          }
+      }
+  }
+  .description {
+      margin: 1.9rem 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .section {
+      margin-bottom: 3rem;
+  }
+  .section-title {
+      padding: 1rem;
+      .subtitle {
+          font-size: 1.6rem !important;
+      }
+      .title {
+          font-size: 3rem !important;
+          span {
+              &::after {
+                  left: inherit;
+                  right: 0;
+                  bottom: -1rem !important;
+                  width: 15rem !important;
+                  background-size: contain;
+              }
+          }
+      }
+  }
+}
+img{
+  vertical-align: middle;
+}
+
+.section {
+  margin-bottom: 6rem;
+}
