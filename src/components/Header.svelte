@@ -2,49 +2,55 @@
     import { currentLocale, translationStore } from "../lib/i18n";
     import { LOCALE } from "../consts/common";
     import logo from "../assets/images/logo.png";
-    import { onMount } from "svelte";
     import viImg from "../assets/images/vi.png";
     import enImg from "../assets/images/en.png";
 
-    let navbarCollapse: HTMLElement | null;
-    let collapse;
-    const handleClick = () => {
-        import("bootstrap").then((boostrap) => {
-            if(!navbarCollapse) return;
-            collapse = new boostrap.Collapse(navbarCollapse, { toggle: false });
-            collapse.hide();
-        });
-    };
     let _: any;
     $: _ = $translationStore;
+
+    let isNavbarOpen = false;
+
+    const toggleNavbar = () => {
+        isNavbarOpen = !isNavbarOpen;
+    };
+
+    const closeNavbar = () => {
+        if (isNavbarOpen) {
+            isNavbarOpen = false;
+        }
+    };
+    const handleClick = () => {
+        closeNavbar();
+    };
 
     function switchLanguage(lang: string) {
         currentLocale.set(lang);
         handleClick();
     }
-
-    onMount(() => {
-        navbarCollapse = document.getElementById("navbarSupportedContent");
-    });
 </script>
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-        <a class="navbar-brand logo" href="/">
-            <img class="logo-img" src={logo} alt="logo" />
+        <a class="navbar-brand logo" on:click={handleClick} href="/">
+            <img  class="logo-img" src={logo} alt="logo" />
         </a>
         <button
+            on:click={toggleNavbar}
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
-            aria-expanded="false"
+            aria-expanded={isNavbarOpen ? "true" : "false"}
             aria-label="Toggle navigation"
         >
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+            class:show={isNavbarOpen}
+        >
             <ul class="navbar-nav p-4 p-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="/" on:click={handleClick}
@@ -90,9 +96,12 @@
 <style lang="scss">
     .logo {
         display: block;
-       
     }
-
+    .navbar-toggler{
+        &:focus{
+            box-shadow: none;
+        }
+    }
     .navbar {
         font-size: 1.6rem;
         color: var(--secondary-text-color);
@@ -153,7 +162,6 @@
         }
     }
     @media (max-width: 767px) {
-        
         .navbar-nav {
             gap: 1rem !important;
         }
@@ -163,5 +171,4 @@
             min-height: 6rem !important;
         }
     }
-    
 </style>

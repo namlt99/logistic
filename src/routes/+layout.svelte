@@ -39,15 +39,23 @@
 
     const showHeader = writable(true);
     let lastScrollY = 0;
+    let scrollTimeout;
 
     const handleScroll = () => {
-        const currentScrollY = window.scrollY;
+        const currentScrollY =
+            window.scrollY || document.documentElement.scrollTop;
         if (currentScrollY > lastScrollY) {
             showHeader.set(false);
         } else {
             showHeader.set(true);
         }
-        lastScrollY = currentScrollY;
+        lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+
+        scrollTimeout = setTimeout(() => {
+            if(window.scrollY === 0){
+                showHeader.set(true);
+            }
+        }, 200)
     };
 
     const initialize = async () => {

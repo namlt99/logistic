@@ -117,7 +117,7 @@
 
 <div class="container section">
     <div class="row">
-        <div class="col-lg-6" data-aos="fade-left">
+        <div class="col-lg-6" >
             <div class="section-title">
                 <h4 class="subtitle">WE SPECIALISE IN THE TRANSPORTATION</h4>
                 <h2 class="title">
