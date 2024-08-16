@@ -1,38 +1,94 @@
 <script lang="ts">
     import { translationStore } from "$lib/i18n";
-    const URI = "https://script.google.com/macros/s/AKfycbxwSy2nY7k4ogKewBJ5gv1S-gjZtg7DyNNNzzR2HKPXvJZnhNlzASxNcGPXqeRjahgaeg/exec"
-    //https://script.google.com/macros/s/AKfycbxwSy2nY7k4ogKewBJ5gv1S-gjZtg7DyNNNzzR2HKPXvJZnhNlzASxNcGPXqeRjahgaeg/exec?action=addUser
-    //   {
-    //     "name": "nam",
-    //     "age":"123",
-    //     "mobile":"123314123",
-    //     "email": "asdfasf@gmail.com"
-    // }
+    const URI =
+        "https://script.google.com/macros/s/AKfycbwGSyCyuf6Haao7RjAxDZBA-Asaj4x5wtLswAUTMK9R-opLivRBAac6bEjt367SiRi57Q/exec";
 
-
-  
     let _: any;
     $: _ = $translationStore;
 
-    const contactForm = {
-      firstName: '',
-      lastName: '',
-      phone: '',
-      email: "",
-      message: ""
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    interface Contact {
+        firstName: string;
+        lastName: string;
+        phone: string;
+        email: string;
+        message: string;
     }
 
-    async function handleSend() {
-      const response = await fetch(URI, {
-        method: "POST",
-        body: JSON.stringify(contactForm),
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      });
+    let contactForm: Contact;
 
-      const result = await response.json();
-      console.log(result);
+    let firstNameError = "";
+    let lastNameError = "";
+    let phoneError = "";
+    let emailError = "";
+
+    function initForm() {
+        contactForm = {
+            firstName: "",
+            lastName: "",
+            phone: "",
+            email: "",
+            message: "",
+        };
+    }
+
+    initForm();
+
+    const validateForm = () => {
+        let valid = true;
+
+        if (!contactForm.firstName.trim()) {
+            firstNameError = "Họ không được để trống";
+            valid = false;
+        } else {
+            firstNameError = "";
+        }
+
+        if (!contactForm.lastName.trim()) {
+            lastNameError = "Tên không được để trống";
+            valid = false;
+        } else {
+            lastNameError = "";
+        }
+
+        if (!contactForm.phone.trim()) {
+            phoneError = "Số điện thoại không được để trống";
+            valid = false;
+        } else {
+            phoneError = "";
+        }
+
+        if (!contactForm.email.trim()) {
+            emailError = "Email không được để trống";
+            valid = false;
+        } else {
+            if (!emailRegex.test(contactForm.email)) {
+                emailError = "Không đúng định dạng email";
+                valid = false;
+            } else {
+                emailError = "";
+            }
+        }
+
+        return valid;
+    };
+
+    async function handleSend() {
+        if (!validateForm()) return;
+
+        const response = await fetch(URI, {
+            method: "POST",
+            body: JSON.stringify(contactForm),
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        initForm();
+        alert("Thông tin đã được gửi đi");
+        const result = await response.json();
+
+        // console.log(result);
     }
 </script>
 
@@ -45,6 +101,9 @@
             <form action="">
                 <div class="row">
                     <div class="col-md-6 col-lg-6">
+                        {#if firstNameError}
+                            <p class="msg_error">{firstNameError}</p>
+                        {/if}
                         <input
                             type="text"
                             name="firstName"
@@ -53,6 +112,9 @@
                         />
                     </div>
                     <div class="col-md-6 col-lg-6">
+                        {#if lastNameError}
+                            <p class="msg_error">{lastNameError}</p>
+                        {/if}
                         <input
                             type="text"
                             name="lastName"
@@ -61,6 +123,9 @@
                         />
                     </div>
                     <div class="col-md-6 col-lg-6">
+                        {#if phoneError}
+                            <p class="msg_error">{phoneError}</p>
+                        {/if}
                         <input
                             type="text"
                             name="phone"
@@ -69,8 +134,12 @@
                         />
                     </div>
                     <div class="col-md-6 col-lg-6">
+                        {#if emailError}
+                            <p class="msg_error">{emailError}</p>
+                        {/if}
                         <input
                             type="email"
+                            id="email"
                             name="email"
                             bind:value={contactForm.email}
                             placeholder={_.contact_form_email}
@@ -86,8 +155,10 @@
                         ></textarea>
                     </div>
                     <div class="col-lg-12">
-                        <button on:click={handleSend} class="btn-submit" type="submit"
-                            >{_.contact_form_submit}</button
+                        <button
+                            on:click={handleSend}
+                            class="btn-submit"
+                            type="submit">{_.contact_form_submit}</button
                         >
                     </div>
                 </div>
@@ -144,6 +215,13 @@
 <style lang="scss">
     .contact-title {
         margin-bottom: 3rem;
+    }
+    .msg_error {
+        font-size: 11px;
+        color: #f05923;
+        display: block;
+        padding: 0 5px 5px 5px;
+        margin: 0;
     }
     form {
         input {
