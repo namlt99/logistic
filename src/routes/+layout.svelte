@@ -51,23 +51,21 @@
     };
 
     const initialize = async () => {
-    // Load Bootstrap JavaScript if on the client side
+        // Load Bootstrap JavaScript if on the client side
         if (typeof window !== "undefined") {
-        await import("bootstrap/dist/js/bootstrap.bundle.min.js");
+            await import("bootstrap/dist/js/bootstrap.bundle.min.js");
         }
-        
+
         // Add the scroll event listener
         window.addEventListener("scroll", handleScroll);
     };
     // load ban dich khi khoi tao app
-    onMount( () => {
-
+    onMount(() => {
         initialize();
 
         AOS.init();
         loadTranslations(get(currentLocale));
         // locale.subscribe(value => current = value);
-
 
         // Cleanup function to remove the event listener
         return () => {
@@ -160,6 +158,11 @@
         }
     }
 
+    @media (max-width: 991px) {
+        main {
+            margin-top: 6rem;
+        }
+    }
     footer {
         position: relative;
         bottom: 0;

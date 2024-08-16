@@ -7,7 +7,7 @@
 
 <div class="process-board">
     <div class="process-board_header">
-        <img src={logo} alt="logo">
+        <img class="logo-img" src={logo} alt="logo">
     </div>
     <div class="process-board_body">
         <div class="step">

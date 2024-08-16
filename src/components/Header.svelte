@@ -31,7 +31,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
         <a class="navbar-brand logo" href="/">
-            <img src={logo} alt="logo" />
+            <img class="logo-img" src={logo} alt="logo" />
         </a>
         <button
             class="navbar-toggler"
@@ -90,6 +90,7 @@
 <style lang="scss">
     .logo {
         display: block;
+       
     }
 
     .navbar {
@@ -152,8 +153,15 @@
         }
     }
     @media (max-width: 767px) {
+        
         .navbar-nav {
             gap: 1rem !important;
         }
     }
+    @media (max-width: 991px) {
+        .navbar {
+            min-height: 6rem !important;
+        }
+    }
+    
 </style>

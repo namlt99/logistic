@@ -203,7 +203,7 @@ p{
 }
 @media (max-width: 767px) {
   .section {
-      margin-bottom: 3rem;
+      margin-bottom: 1rem !important;
   }
   .section-title {
       padding: 1rem;
@@ -223,6 +223,9 @@ p{
           }
       }
   }
+  .logo-img{
+    width: 6rem !important;
+  }
 }
 img{
   vertical-align: middle;
@@ -230,4 +233,8 @@ img{
 
 .section {
   margin-bottom: 6rem;
+}
+
+.logo-img{
+  width: 10rem;
 }
