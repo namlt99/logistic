@@ -15,9 +15,6 @@
     import AOS from "aos";
     import "aos/dist/aos.css";
 
-    let showHeader = writable(true);
-
-    let lastScrollY = 0;
     let isNotHomePage = true;
     let namePage = "";
     const navbar = ["", "about", "service", "event", "contact"];
@@ -27,7 +24,7 @@
 
     $: {
         namePage = $page.url.pathname.substring(
-            $page.url.pathname.lastIndexOf("/") + 1
+            $page.url.pathname.lastIndexOf("/") + 1,
         );
         if (navbar.includes(namePage)) {
             if (namePage === "") {
@@ -39,23 +36,40 @@
             isNotHomePage = false;
         }
     }
+
+    const showHeader = writable(true);
+    let lastScrollY = 0;
+
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY) {
+            showHeader.set(false);
+        } else {
+            showHeader.set(true);
+        }
+        lastScrollY = currentScrollY;
+    };
+
+    const initialize = async () => {
+    // Load Bootstrap JavaScript if on the client side
+        if (typeof window !== "undefined") {
+        await import("bootstrap/dist/js/bootstrap.bundle.min.js");
+        }
+        
+        // Add the scroll event listener
+        window.addEventListener("scroll", handleScroll);
+    };
     // load ban dich khi khoi tao app
-    onMount(() => {
+    onMount( () => {
+
+        initialize();
+
         AOS.init();
         loadTranslations(get(currentLocale));
         // locale.subscribe(value => current = value);
 
-        const handleScroll = () => {
-            if (window.scrollY > lastScrollY) {
-                showHeader.set(false);
-            } else {
-                showHeader.set(true);
-            }
-            lastScrollY = window.scrollY;
-        };
 
-        window.addEventListener("scroll", handleScroll);
-
+        // Cleanup function to remove the event listener
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
