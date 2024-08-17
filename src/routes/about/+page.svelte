@@ -79,10 +79,10 @@
                 </div>
                 <div class="counter-box2">
                     <div class="content" id="counter">
-                        <span class="count">50</span><span class="suffix"
+                        <span class="count">30</span><span class="suffix"
                             >+</span
                         >
-                        <p>{_.about_years_exp}</p>
+                        <p>{_.about_team_member}</p>
                     </div>
                 </div>
                 <div class="counter-box2">
@@ -90,14 +90,14 @@
                         <span class="count">100</span><span class="suffix"
                             >+</span
                         >
-                        <p>{_.about_years_exp}</p>
+                        <p>{_.about_team_customer}</p>
                     </div>
                 </div>
                 <div class="counter-box2">
                     <div class="content" id="counter">
                         <span class="count">5</span><span class="suffix">+</span
                         >
-                        <p>{_.about_years_exp}</p>
+                        <p>{_.about_team_type_trans}</p>
                     </div>
                 </div>
             </div>
