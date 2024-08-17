@@ -1,7 +1,7 @@
 <script lang="ts">
     import { translationStore } from "$lib/i18n";
     const URI =
-        "https://script.google.com/macros/s/AKfycbwGSyCyuf6Haao7RjAxDZBA-Asaj4x5wtLswAUTMK9R-opLivRBAac6bEjt367SiRi57Q/exec";
+        "https://script.google.com/macros/s/AKfycbwJssQrvM69l9DPf-ekABiTXRZXc4Fje34ponZhj1Lew1QrLY-kQD85gHPMtvSaiRnMIA/exec";
 
     let _: any;
     $: _ = $translationStore;

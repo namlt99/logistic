@@ -12,25 +12,15 @@
 
 <div class="container section" data-aos="fade-up">
     <div class="section-title left">
-        <h2 class="title">We are TransCargo!</h2>
+        <h2 class="title">SIL logistic</h2>
         <p class="description">
-            Logistics Ground’s flexible model, using only quality carriers,
-            means you benefit from improved service levels, greater flexibility
-            and time-definite deliveries. Our expertise in transport management
-            and planning allows us to design a solution that meets your needs
-            and also quickly respond to any event disruptions, such as weather.
+            {_.about_desc_1}
         </p>
         <p class="description">
-            Integrated Road networks, covering the world. Through our global
-            network of control towers and state-of-the-art technology, we are
-            able to monitor and dynamically react to situations such as adverse
-            weather, additional pick ups or drop offs, or heavy traffic, meaning
-            that your goods are always travelling the most efficient route.
+            {_.about_desc_2}
         </p>
         <p class="description">
-            Our non-asset based Road network provides you with flexibility,
-            improved service levels, accelerated delivery, reduced direct and
-            indirect costs and much less complexity.
+            {_.about_desc_3}
         </p>
     </div>
 </div>
@@ -53,7 +43,7 @@
                 <div class="img-3"><img src={aboutImg_5} alt="about 3" /></div>
                 <div class="text-box">
                     <h2>10+</h2>
-                    <h4>Years of experience</h4>
+                    <h4>{_.about_years_exp}</h4>
                 </div>
                 <div class="shape">
                     <img src={aboutShape} alt="shape" />
@@ -63,14 +53,10 @@
         <div class="col-lg-6" data-aos="fade-left">
             <div class="about-content">
                 <div class="section-title left">
-                    <h4 class="subtitle">Why Choose Us</h4>
-                    <h2 class="title">Global Reach Local Expertise</h2>
+                    <h4 class="subtitle">{_.about_why_choose_sub_title}</h4>
+                    <h2 class="title">{_.about_why_choose_title}</h2>
                     <p class="description">
-                        We have been operating for over a decade, providing
-                        top-notch services to our serv clients and building a
-                        strong track record in the industry.We have been
-                        operating for over a decade, providing top-notch service
-                        provide all time
+                       {_.about_why_choose_desc}
                     </p>
                 </div>
             </div>
@@ -88,7 +74,7 @@
                         <span class="count">10</span><span class="suffix"
                             >+</span
                         >
-                        <p>Years Experience</p>
+                        <p>{_.about_years_exp}</p>
                     </div>
                 </div>
                 <div class="counter-box2">
@@ -96,7 +82,7 @@
                         <span class="count">50</span><span class="suffix"
                             >+</span
                         >
-                        <p>Team members</p>
+                        <p>{_.about_years_exp}</p>
                     </div>
                 </div>
                 <div class="counter-box2">
@@ -104,14 +90,14 @@
                         <span class="count">100</span><span class="suffix"
                             >+</span
                         >
-                        <p>Customers</p>
+                        <p>{_.about_years_exp}</p>
                     </div>
                 </div>
                 <div class="counter-box2">
                     <div class="content" id="counter">
                         <span class="count">5</span><span class="suffix">+</span
                         >
-                        <p>Types transportation</p>
+                        <p>{_.about_years_exp}</p>
                     </div>
                 </div>
             </div>
@@ -120,47 +106,44 @@
 </div>
 <div class="container section">
     <div class="section-title">
-        <h2 class="title">OUR MISSION</h2>
+        <h2 class="title">{_.about_our_mission_title}</h2>
     </div>
     <div class="row" data-aos="fade-up">
         <div class="col-md-6">
             <ul class="mission-list">
                 <li class="mission-text">
-                    <i class="bi bi-check"></i>Deliver Environmentally
-                    Responsible Client Services
+                    <i class="bi bi-check"></i>{_.about_mission_1}
                 </li>
                 <li class="mission-text">
-                    <i class="bi bi-check"></i>Provide Employees with an
-                    Attractive Working Environment
+                    <i class="bi bi-check"></i>{_.about_mission_2}
                 </li>
                 <li class="mission-text">
-                    <i class="bi bi-check"></i>Be an Active Community Partner
+                    <i class="bi bi-check"></i>{_.about_mission_3}
                 </li>
                 <li class="mission-text">
-                    <i class="bi bi-check"></i>Maintain High Ethical Standards
+                    <i class="bi bi-check"></i>{_.about_mission_4}
                 </li>
                 <li class="mission-text">
-                    <i class="bi bi-check"></i>Drive Continuous Improvement
+                    <i class="bi bi-check"></i>{_.about_mission_5}
                 </li>
             </ul>
         </div>
         <div class="col-md-6">
             <ul class="mission-list">
                 <li class="mission-text">
-                    <i class="bi bi-check"></i>Freight Security
+                    <i class="bi bi-check"></i>{_.about_mission_6}
                 </li>
                 <li class="mission-text">
-                    <i class="bi bi-check"></i>Air & Ocean Cargo Insurance
+                    <i class="bi bi-check"></i>{_.about_mission_7}
                 </li>
                 <li class="mission-text">
-                    <i class="bi bi-check"></i>Our highly efficient customs
-                    brokerage
+                    <i class="bi bi-check"></i>{_.about_mission_8}
                 </li>
                 <li class="mission-text">
-                    <i class="bi bi-check"></i>Clearance and compliance service
+                    <i class="bi bi-check"></i>{_.about_mission_9}
                 </li>
                 <li class="mission-text">
-                    <i class="bi bi-check"></i>We ensure complete security
+                    <i class="bi bi-check"></i>{_.about_mission_10}
                 </li>
             </ul>
         </div>

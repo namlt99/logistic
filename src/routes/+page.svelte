@@ -39,7 +39,11 @@
     >
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src={carouselImage_1} class="d-block w-100" alt="SIL logistic" />
+                <img
+                    src={carouselImage_1}
+                    class="d-block w-100"
+                    alt="SIL logistic"
+                />
                 <div
                     class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(6, 3, 21, 0.2)"
@@ -63,7 +67,11 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src={carouselImage_2} class="d-block w-100" alt="SIL logistic" />
+                <img
+                    src={carouselImage_2}
+                    class="d-block w-100"
+                    alt="SIL logistic"
+                />
                 <div
                     class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(6, 3, 21, 0.6)"
@@ -87,7 +95,11 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src={carouselImage_3} class="d-block w-100" alt="SIL logistic" />
+                <img
+                    src={carouselImage_3}
+                    class="d-block w-100"
+                    alt="SIL logistic"
+                />
                 <div
                     class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                     style="background: rgba(6, 3, 21, 0.6)"
@@ -117,23 +129,18 @@
 
 <div class="container section">
     <div class="row">
-        <div class="col-lg-6" >
+        <div class="col-lg-6">
             <div class="section-title">
-                <h4 class="subtitle">WE SPECIALISE IN THE TRANSPORTATION</h4>
+                <h4 class="subtitle">{_.home_block_1_sub_title}</h4>
                 <h2 class="title">
-                    Manage your Complex Logistics as can Focus
+                    {_.home_block_1_title}
                 </h2>
             </div>
         </div>
         <div class="col-lg-6" data-aos="fade-right">
             <div class="section-title">
                 <p class="description">
-                    Providing comprehensive logistics services,including
-                    intermodal transportation,full container load and
-                    warehousing capabilities,ensuring that goods are transported
-                    safely,on time and efficiently from source to
-                    destination,meeting the various transportation needs of
-                    global customers.
+                    {_.home_block_1_desc}
                 </p>
             </div>
         </div>
@@ -156,8 +163,8 @@
                         </div>
                         <div class="right">
                             <div class="text-box">
-                                <h2 class="title">10</h2>
-                                <p class="description">Years Of experience</p>
+                                <h2 class="title">10+</h2>
+                                <p class="description">{_.about_years_exp}</p>
                             </div>
                             <div class="image-2">
                                 <img src={aboutImg_3} alt="ship" />
@@ -169,23 +176,28 @@
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="about-content">
                     <div class="section-title left">
-                        <h4 class="subtitle">Who we are</h4>
+                        <h4 class="subtitle">{_.home_block_2_sub_title}</h4>
                         <h2 class="title">
-                            Connecting <span>Continents</span> Delivering Dreams
+                            {_.home_block_2_title_1}<span
+                                >{_.home_block_2_title_2}</span
+                            >{_.home_block_2_title_3}
                         </h2>
                         <p class="description">
-                            Et purus duis sollicitudin dignissim habitant.
-                            Egestas nulla quis venenatis cras sed eu massa eu
-                            faucibus Urna fusce Et purus do sollicitudin
-                            dignissim habitant. Egestas nulla dignissim habi
-                            tant. Egestas nulla quis venenatis in dignissim
+                            {_.home_block_2_desc}
                         </p>
                     </div>
                     <ul class="list">
-                        <li><i class="bi bi-check"></i> Air Freight</li>
-                        <li><i class="bi bi-check"></i> Road Freight</li>
                         <li>
-                            <i class="bi bi-check"></i> International Shipment
+                            <i class="bi bi-check"></i>
+                            {_.home_block_2_item_1}
+                        </li>
+                        <li>
+                            <i class="bi bi-check"></i>
+                            {_.home_block_2_item_2}
+                        </li>
+                        <li>
+                            <i class="bi bi-check"></i>
+                            {_.home_block_2_item_3}
                         </li>
                     </ul>
                 </div>
@@ -215,15 +227,9 @@
     <div class="row">
         <div class="col-lg-6" data-aos="fade-right">
             <div class="section-title">
-                <h2 class="title">Why We are the Best</h2>
+                <h2 class="title">{_.home_block_3_title}</h2>
                 <p class="description">
-                    We pride ourselves on providing the best transport and
-                    shipping services available allover the world. Our skilled
-                    personnel, utilising communications, tracking and processing
-                    software, combined with decades of experience! Through
-                    integrated supply chain solutions, Equita drives sustainable
-                    competitive advantages to some of Viet Nam largest
-                    companies.
+                    {_.home_block_3_desc}
                 </p>
             </div>
         </div>
@@ -237,10 +243,11 @@
                             alt="item-package"
                         />
                         <div class="item-content">
-                            <h4 class="item-title">Safe Packing</h4>
+                            <h4 class="item-title">
+                                {_.home_block_3_item_1_title}
+                            </h4>
                             <p class="item-desc">
-                                International supply chains involves challenging
-                                regulations.
+                                {_.home_block_3_item_1_desc}
                             </p>
                         </div>
                     </div>
@@ -253,10 +260,11 @@
                             alt="item-package"
                         />
                         <div class="item-content">
-                            <h4 class="item-title">In Time Delivery</h4>
+                            <h4 class="item-title">
+                                {_.home_block_3_item_2_title}
+                            </h4>
                             <p class="item-desc">
-                                International supply chains involves challenging
-                                regulations.
+                                {_.home_block_3_item_2_desc}
                             </p>
                         </div>
                     </div>
@@ -271,10 +279,11 @@
                             alt="item-package"
                         />
                         <div class="item-content">
-                            <h4 class="item-title">Ship Everywhere</h4>
+                            <h4 class="item-title">
+                                {_.home_block_3_item_3_title}
+                            </h4>
                             <p class="item-desc">
-                                International supply chains involves challenging
-                                regulations.
+                                {_.home_block_3_item_3_desc}
                             </p>
                         </div>
                     </div>
@@ -287,10 +296,11 @@
                             alt="item-package"
                         />
                         <div class="item-content">
-                            <h4 class="item-title">Fastets Shipping</h4>
+                            <h4 class="item-title">
+                                {_.home_block_3_item_4_title}
+                            </h4>
                             <p class="item-desc">
-                                International supply chains involves challenging
-                                regulations.
+                                {_.home_block_3_item_4_desc}
                             </p>
                         </div>
                     </div>
@@ -304,9 +314,9 @@
 <div class="container section">
     <div class="align-items-center">
         <div class="section-title left case-study-title" data-aos="fade-right">
-            <h4 class="subtitle">Case Study</h4>
+            <h4 class="subtitle">{_.home_block_4_sub_title}</h4>
             <h2 class="title">
-                Miles Ahead <span>in Logistics</span> Excellence Work
+                {_.home_block_4_title_1} <span>{_.home_block_4_title_2}</span>
             </h2>
         </div>
     </div>
