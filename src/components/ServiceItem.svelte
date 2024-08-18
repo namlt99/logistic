@@ -31,7 +31,7 @@
         </p>
     </div>
     <div class="service-item-footer">
-        <a class="hyper-link" href="/service/{currentLocate === "vi" ? slug_vi : slug_en}">LEARN MORE <i class="bi bi-chevron-right"></i></a>
+        <a class="hyper-link" href="/service/{currentLocate === "vi" ? slug_vi : slug_en}">{_.learn_more} <i class="bi bi-chevron-right"></i></a>
     </div>
 </div>
 

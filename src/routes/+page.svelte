@@ -22,16 +22,128 @@
     import ServiceItem from "../components/ServiceItem.svelte";
     import Partner from "../components/Partner.svelte";
     import { servicesStore } from "$lib/serviceStore";
+    import Carousel from "../components/Carousel.svelte";
+    import { Splide, SplideSlide } from "@splidejs/svelte-splide";
+    import "@splidejs/svelte-splide/css";
 
     let _: any;
     let services: any = [];
     $: _ = $translationStore;
     $: servicesStore.subscribe((res) => (services = res));
+    let carousels = [
+        {
+            img: carouselImage_1,
+            title: "carousel_1_title",
+            desc: "carousel_1_desc",
+        },
+        {
+            img: carouselImage_2,
+            title: "carousel_2_title",
+            desc: "carousel_2_desc",
+        },
+        {
+            img: carouselImage_3,
+            title: "carousel_3_title",
+            desc: "carousel_3_desc",
+        },
+    ];
+    const options = {
+        type: "loop",
+        perPage: 1,
+        autoplay: true,
+        interval: 3000,
+        pauseOnHover: true,
+        arrows: false,
+    };
 </script>
 
 <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5 section">
-    <div
+    <div class="carousel-inner">
+        <Splide class="carousel" {options}>
+            {#each carousels as item}
+                <SplideSlide>
+                    <div class="carousel-item active">
+                        <img
+                            style="width: 100%; height: 100%;  object-fit: cover;"
+                            src={item.img}
+                            alt="Image 1"
+                        />
+                        <div
+                            class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                            style="background: rgba(6, 3, 21, 0.6)"
+                        >
+                            <div class="container">
+                                <div
+                                    class="row justify-content-start carousel-content"
+                                >
+                                    <div class="col-10 col-lg-8">
+                                        <h1
+                                            class="text-white text-uppercase mb-3 animated slideInDown carousel-title"
+                                        >
+                                            {_[item.title]}
+                                        </h1>
+                                        <h5
+                                            class="display-3 text-white animated slideInDown mb-4 carousel-desc"
+                                        >
+                                            {_[item.desc]}
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </SplideSlide>
+            {/each}
+        </Splide>
+    </div>
+    <!-- <Splide class="carousel"
+            options={{
+                type: "loop", // Chạy vòng lặp
+                perPage: 1, // Số lượng slides hiển thị mỗi trang
+                autoplay: true, // Tự động chạy
+                interval: 3000, // Thời gian mỗi slide (ms)
+                pauseOnHover: true,
+                arrows: false,
+            }}
+        >
+            {#each carousels as item}
+                <SplideSlide>
+                    <div class="carousel-item active">
+                        <img
+                            src={item.img}
+                            class="d-block w-100"
+                            alt="SIL logistic"
+                        />
+                        <div
+                            class="carousel-main-content align-items-center"
+                            style="background: rgba(6, 3, 21, 0.2)"
+                        >
+                            <div class="container">
+                                <div
+                                    class="row justify-content-start carousel-content"
+                                >
+                                    <div class="col-10 col-lg-8">
+                                        <h1
+                                            class="text-white text-uppercase mb-3 animated slideInDown carousel-title"
+                                        >
+                                            {_[item.title]}
+                                        </h1>
+                                        <h5
+                                            class="display-3 text-white animated slideInDown mb-4 carousel-desc"
+                                        >
+                                            {_[item.desc]}
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </SplideSlide>
+            {/each}
+        </Splide> -->
+    <!-- </div> -->
+    <!-- <div
         id="carouselExampleSlidesOnly"
         class="carousel slide"
         data-bs-ride="carousel"
@@ -123,7 +235,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 <!-- Carousel End -->
 
@@ -385,20 +497,15 @@
             transform: scale(1);
         }
     }
+    .splide {
+        // height: 900px; /* Đặt chiều cao cố định cho carousel */
+        height: 100%;
+    }
 
-    .carousel-inner {
+    // height: 60rem;
+    .carousel-item {
+        width: 100%;
         aspect-ratio: 3;
-        .carousel-item {
-            width: 100%;
-            height: 100%;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            animation: 5s linear scale;
-            transition: all 0.5s;
-        }
         h1 {
             font-weight: 700;
             font-size: 6.4rem;
@@ -663,8 +770,8 @@
     }
 
     @media only screen and (max-width: 920px) {
-        .carousel-inner {
-            aspect-ratio: 1;
+        .carousel-item {
+            aspect-ratio: 2;
         }
 
         .carousel-content {

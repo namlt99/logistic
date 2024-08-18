@@ -18,7 +18,7 @@
 <a href="/service/{currentLocate === 'vi' ? slug_vi : slug_en}">
     <div class="cart" data-id={id}>
         <div class="cart-header">
-            <h3>Giao nhận</h3>
+            <h3>{_.service_card_title}</h3>
             <div class="is-divider"></div>
         </div>
         <div class="cart-body">
