@@ -91,7 +91,21 @@
         // console.log(result);
     }
 </script>
-
+<svelte:head>
+  <title>Liên Hệ - SIL Logistic</title>
+  <meta name="description" content="Liên hệ với SIL Logistic để nhận tư vấn về dịch vụ vận tải toàn cầu và giải pháp logistics tối ưu cho doanh nghiệp của bạn." />
+  <meta name="keywords" content="liên hệ SIL Logistic, tư vấn logistics, dịch vụ vận tải" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Liên Hệ - SIL Logistic" />
+  <meta property="og:description" content="Liên hệ SIL Logistic để được hỗ trợ và tư vấn về các dịch vụ vận tải và logistics chuyên nghiệp." />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="https://sil-logistic.com/contact-image.jpg" />
+  <meta property="og:url" content="https://sil-logistic.com/contact" /> -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Liên Hệ - SIL Logistic" />
+  <meta name="twitter:description" content="Chúng tôi sẵn sàng hỗ trợ bạn với các giải pháp logistics tốt nhất từ SIL Logistic." />
+  <!-- <meta name="twitter:image" content="https://sil-logistic.com/contact-image.jpg" /> -->
+</svelte:head>
 <div class="container">
     <div class="section-title contact-title">
         <h2 class="title">{_.contact_title}</h2>

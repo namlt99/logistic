@@ -1,0 +1,10 @@
+# Tệp robots.txt cho SIL Logistic
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sil-logistic.com/sitemap.xml
+
+# Cấm lập chỉ mục các trang sau (ví dụ):
+Disallow: /admin/
+Disallow: /internal/

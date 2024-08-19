@@ -55,7 +55,21 @@
         arrows: false,
     };
 </script>
-
+<svelte:head>
+  <title>SIL Logistic - Dịch vụ Logistics Toàn Cầu Uy Tín</title>
+  <meta name="description" content="SIL Logistic cung cấp giải pháp vận tải toàn cầu an toàn, nhanh chóng, và hiệu quả. Đảm bảo giao hàng đúng hẹn và tối ưu chi phí cho doanh nghiệp của bạn." />
+  <meta name="keywords" content="SIL Logistic, logistics, dịch vụ vận tải, vận chuyển toàn cầu, giao nhận hàng hóa" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="SIL Logistic - Dịch vụ Logistics Toàn Cầu Uy Tín" />
+  <meta property="og:description" content="Giải pháp logistics toàn cầu từ SIL Logistic, đảm bảo an toàn và tối ưu cho doanh nghiệp." />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="https://sil-logistic.com/home-image.jpg" />
+  <meta property="og:url" content="https://sil-logistic.com" /> -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SIL Logistic - Dịch vụ Logistics Toàn Cầu Uy Tín" />
+  <meta name="twitter:description" content="Giải pháp vận tải hiệu quả từ SIL Logistic, đối tác tin cậy cho doanh nghiệp." />
+  <!-- <meta name="twitter:image" content="https://sil-logistic.com/home-image.jpg" /> -->
+</svelte:head>
 <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5 section">
     <div class="carousel-inner">
