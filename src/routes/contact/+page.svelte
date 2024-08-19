@@ -205,9 +205,9 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5848113929906!2d106.65054277688263!3d10.843051389309743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a27a1e2eef%3A0x2848f190898594b4!2zMTQ0IE5ndXnhu4VuIFbEg24gS2jhu5FpLCBQaMaw4budbmcgOCwgR8OyIFbhuqVwLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1723695334535!5m2!1svi!2s"
             width="100%"
             style="border:0;"
-            allowfullscreen="true"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            title="google map"
         ></iframe>
     </div>
 </div>

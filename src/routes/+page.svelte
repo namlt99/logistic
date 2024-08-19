@@ -22,7 +22,6 @@
     import ServiceItem from "../components/ServiceItem.svelte";
     import Partner from "../components/Partner.svelte";
     import { servicesStore } from "$lib/serviceStore";
-    import Carousel from "../components/Carousel.svelte";
     import { Splide, SplideSlide } from "@splidejs/svelte-splide";
     import "@splidejs/svelte-splide/css";
 
@@ -64,11 +63,7 @@
             {#each carousels as item}
                 <SplideSlide>
                     <div class="carousel-item active">
-                        <img
-                            style="width: 100%; height: 100%;  object-fit: cover;"
-                            src={item.img}
-                            alt="Image 1"
-                        />
+                        <img src={item.img} alt="SIL logistic" style="width: 100%; height: 100%;  object-fit: cover;">
                         <div
                             class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                             style="background: rgba(6, 3, 21, 0.6)"
@@ -97,145 +92,6 @@
             {/each}
         </Splide>
     </div>
-    <!-- <Splide class="carousel"
-            options={{
-                type: "loop", // Chạy vòng lặp
-                perPage: 1, // Số lượng slides hiển thị mỗi trang
-                autoplay: true, // Tự động chạy
-                interval: 3000, // Thời gian mỗi slide (ms)
-                pauseOnHover: true,
-                arrows: false,
-            }}
-        >
-            {#each carousels as item}
-                <SplideSlide>
-                    <div class="carousel-item active">
-                        <img
-                            src={item.img}
-                            class="d-block w-100"
-                            alt="SIL logistic"
-                        />
-                        <div
-                            class="carousel-main-content align-items-center"
-                            style="background: rgba(6, 3, 21, 0.2)"
-                        >
-                            <div class="container">
-                                <div
-                                    class="row justify-content-start carousel-content"
-                                >
-                                    <div class="col-10 col-lg-8">
-                                        <h1
-                                            class="text-white text-uppercase mb-3 animated slideInDown carousel-title"
-                                        >
-                                            {_[item.title]}
-                                        </h1>
-                                        <h5
-                                            class="display-3 text-white animated slideInDown mb-4 carousel-desc"
-                                        >
-                                            {_[item.desc]}
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </SplideSlide>
-            {/each}
-        </Splide> -->
-    <!-- </div> -->
-    <!-- <div
-        id="carouselExampleSlidesOnly"
-        class="carousel slide"
-        data-bs-ride="carousel"
-        data-bs-interval="5000"
-    >
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img
-                    src={carouselImage_1}
-                    class="d-block w-100"
-                    alt="SIL logistic"
-                />
-                <div
-                    class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(6, 3, 21, 0.2)"
-                >
-                    <div class="container">
-                        <div class="row justify-content-start carousel-content">
-                            <div class="col-10 col-lg-8">
-                                <h1
-                                    class="text-white text-uppercase mb-3 animated slideInDown carousel-title"
-                                >
-                                    {_.carousel_1_title}
-                                </h1>
-                                <h5
-                                    class="display-3 text-white animated slideInDown mb-4 carousel-desc"
-                                >
-                                    {_.carousel_1_desc}
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img
-                    src={carouselImage_2}
-                    class="d-block w-100"
-                    alt="SIL logistic"
-                />
-                <div
-                    class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(6, 3, 21, 0.6)"
-                >
-                    <div class="container">
-                        <div class="row justify-content-start carousel-content">
-                            <div class="col-10 col-lg-8">
-                                <h1
-                                    class="text-white text-uppercase mb-3 animated slideInDown carousel-title"
-                                >
-                                    {_.carousel_2_title}
-                                </h1>
-                                <h5
-                                    class="display-3 text-white animated slideInDown mb-4 carousel-desc"
-                                >
-                                    {_.carousel_2_desc}
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img
-                    src={carouselImage_3}
-                    class="d-block w-100"
-                    alt="SIL logistic"
-                />
-                <div
-                    class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(6, 3, 21, 0.6)"
-                >
-                    <div class="container">
-                        <div class="row justify-content-start carousel-content">
-                            <div class="col-10 col-lg-8">
-                                <h1
-                                    class="text-white text-uppercase mb-3 animated slideInDown carousel-title"
-                                >
-                                    {_.carousel_3_title}
-                                </h1>
-                                <h5
-                                    class="display-3 text-white animated slideInDown mb-4 carousel-desc"
-                                >
-                                    {_.carousel_3_desc}
-                                </h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 </div>
 <!-- Carousel End -->
 
@@ -497,12 +353,7 @@
             transform: scale(1);
         }
     }
-    .splide {
-        // height: 900px; /* Đặt chiều cao cố định cho carousel */
-        height: 100%;
-    }
 
-    // height: 60rem;
     .carousel-item {
         width: 100%;
         aspect-ratio: 3;

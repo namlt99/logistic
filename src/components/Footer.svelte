@@ -46,9 +46,9 @@
                 width="100%"
                 height="200"
                 style="border:0;"
-                allowfullscreen="true"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
+                title="google map"
             ></iframe>
             </div>
         </div>

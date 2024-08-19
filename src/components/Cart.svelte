@@ -6,8 +6,8 @@
     export let title: string;
     export let description: string;
     export let slug_vi: string = "";
-    export let icon: string = "";
-    export let desc;
+    // export let icon: string = "";
+    // export let desc;
     export let slug_en: string = "";
 
     let _: any;
