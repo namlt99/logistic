@@ -5,7 +5,7 @@ export const GET: RequestHandler = async () => {
     User-agent: *
     Allow: /
 
-    Sitemap: https://sil-logistic.com/sitemap.xml
+    Sitemap: https://sil.com.vn/sitemap.xml
 
   `;
 

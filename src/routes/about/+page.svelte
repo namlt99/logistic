@@ -1,6 +1,6 @@
 <script lang="ts">
     import ProcessBoard from "../../components/ProcessBoard.svelte";
-    import aboutImg_4 from "../../assets/images/about-4.jpg";
+    import aboutImg_4 from "../../assets/images/container-7.png";
     import aboutImg_5 from "../../assets/images/about-5.jpg";
     import aboutImg_6 from "../../assets/images/about-6.jpg";
     import aboutShape from "../../assets/images/about-shape.png";
@@ -10,23 +10,23 @@
     $: _ = $translationStore;
 </script>
 <svelte:head>
-  <title>Giới Thiệu - SIL Logistic</title>
-  <meta name="description" content="Tìm hiểu về SIL Logistic - công ty logistics uy tín với nhiều năm kinh nghiệm, cung cấp các giải pháp vận tải toàn cầu và quản lý chuỗi cung ứng tối ưu." />
-  <meta name="keywords" content="về SIL Logistic, công ty logistics, vận tải hàng hóa, chuỗi cung ứng" />
+  <title>Giới Thiệu - SIL VietNam</title>
+  <meta name="description" content="Tìm hiểu về SIL VIETNAM - công ty logistics uy tín với nhiều năm kinh nghiệm, cung cấp các giải pháp vận tải toàn cầu và quản lý chuỗi cung ứng tối ưu." />
+  <meta name="keywords" content="về SIL VIETNAM, công ty logistics, vận tải hàng hóa, chuỗi cung ứng" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Giới Thiệu - SIL Logistic" />
-  <meta property="og:description" content="Khám phá lịch sử, sứ mệnh và giá trị cốt lõi của SIL Logistic trong ngành logistics." />
+  <meta property="og:title" content="Giới Thiệu - SIL VIETNAM" />
+  <meta property="og:description" content="Khám phá lịch sử, sứ mệnh và giá trị cốt lõi của SIL VIETNAM trong ngành logistics." />
   <meta property="og:type" content="website" />
-  <!-- <meta property="og:image" content="https://sil-logistic.com/about-image.jpg" />
-  <meta property="og:url" content="https://sil-logistic.com/about" /> -->
+  <!-- <meta property="og:image" content="https://sil.com.vn/about-image.jpg" /> -->
+  <meta property="og:url" content="https://sil.com.vn/about" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Giới Thiệu - SIL Logistic" />
-  <meta name="twitter:description" content="SIL Logistic - Đối tác logistics đáng tin cậy của bạn." />
-  <!-- <meta name="twitter:image" content="https://sil-logistic.com/about-image.jpg" /> -->
+  <meta name="twitter:title" content="Giới Thiệu - SIL VIETNAM" />
+  <meta name="twitter:description" content="SIL VIETNAM - Đối tác logistics đáng tin cậy của bạn." />
+  <!-- <meta name="twitter:image" content="https://sil.com.vn/about-image.jpg" /> -->
 </svelte:head>
 <div class="container section" data-aos="fade-up">
     <div class="section-title left">
-        <h2 class="title">SIL logistic</h2>
+        <h2 class="title">SIL VIETNAM</h2>
         <p class="description">
             {_.about_desc_1}
         </p>

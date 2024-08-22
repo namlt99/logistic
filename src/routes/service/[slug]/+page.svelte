@@ -26,19 +26,19 @@
     }
 </script>
 <svelte:head>
-  <title>Chi Tiết Dịch Vụ - {_[serviceItem.title]} - SIL Logistic</title>
-  <meta name="description" content="Tìm hiểu chi tiết về {_[serviceItem.title]}, một trong những giải pháp vận tải và logistics hàng đầu từ SIL Logistic, giúp tối ưu hóa hoạt động kinh doanh của bạn." />
-  <meta name="keywords" content="{_[serviceItem.title]}, dịch vụ SIL Logistic, logistics, vận tải hàng hóa" />
+  <title>Chi Tiết Dịch Vụ - {_[serviceItem.title]} - SIL VIETNAM</title>
+  <meta name="description" content="Tìm hiểu chi tiết về {_[serviceItem.title]}, một trong những giải pháp vận tải và logistics hàng đầu từ SIL VIETNAM, giúp tối ưu hóa hoạt động kinh doanh của bạn." />
+  <meta name="keywords" content="{_[serviceItem.title]}, dịch vụ SIL VIETNAM, logistics, vận tải hàng hóa" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Chi Tiết Dịch Vụ - {_[serviceItem.title]} - SIL Logistic" />
-  <meta property="og:description" content="Khám phá chi tiết về {_[serviceItem.title]} từ SIL Logistic và cách nó có thể đáp ứng nhu cầu logistics của bạn." />
+  <meta property="og:title" content="Chi Tiết Dịch Vụ - {_[serviceItem.title]} - SIL VIETNAM" />
+  <meta property="og:description" content="Khám phá chi tiết về {_[serviceItem.title]} từ SIL VIETNAM và cách nó có thể đáp ứng nhu cầu logistics của bạn." />
   <meta property="og:type" content="website" />
-  <!-- <meta property="og:image" content="https://sil-logistic.com/servicedetail-image.jpg" /> -->
-  <meta property="og:url" content="https://sil-logistic.com/services/{serviceItem.slug_vi}" />
+  <!-- <meta property="og:image" content="https://sil.com.vn/servicedetail-image.jpg" /> -->
+  <meta property="og:url" content="https://sil.com.vn/services/{serviceItem.slug_vi}" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Chi Tiết Dịch Vụ - {_[serviceItem.title]} - SIL Logistic" />
-  <meta name="twitter:description" content="Tìm hiểu về {_[serviceItem.title]} từ SIL Logistic và cách nó có thể tối ưu chuỗi cung ứng của bạn." />
-  <!-- <meta name="twitter:image" content="https://sil-logistic.com/servicedetail-image.jpg" /> -->
+  <meta name="twitter:title" content="Chi Tiết Dịch Vụ - {_[serviceItem.title]} - SIL VIETNAM" />
+  <meta name="twitter:description" content="Tìm hiểu về {_[serviceItem.title]} từ SIL VIETNAM và cách nó có thể tối ưu chuỗi cung ứng của bạn." />
+  <!-- <meta name="twitter:image" content="https://sil.com.vn/servicedetail-image.jpg" /> -->
 </svelte:head>
 {#if serviceItem}
     <div class="container-fluid page-header py-5">

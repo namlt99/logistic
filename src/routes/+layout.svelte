@@ -52,10 +52,10 @@
         lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
 
         scrollTimeout = setTimeout(() => {
-            if(window.scrollY === 0){
+            if (window.scrollY === 0) {
                 showHeader.set(true);
             }
-        }, 200)
+        }, 200);
     };
 
     const initialize = async () => {
@@ -148,7 +148,7 @@
                 padding-top: 5rem;
                 h1 {
                     font-weight: 700;
-                    font-size: 7rem;
+                    font-size: 6rem;
                 }
             }
         }
@@ -161,6 +161,14 @@
                     h1 {
                         font-size: 4.2rem;
                     }
+                }
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .content {
+                padding: 3rem 5rem 0 1rem !important;
+                h1 {
+                    font-size: 3rem !important;
                 }
             }
         }

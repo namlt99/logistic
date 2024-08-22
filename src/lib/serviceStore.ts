@@ -4,7 +4,7 @@ import img_service_2 from "/src/assets/images/service-2.jpg";
 import img_service_3 from "/src/assets/images/service-3.png";
 import img_service_4 from "/src/assets/images/service-4.jpg";
 import img_service_5 from "/src/assets/images/service-5.jpg";
-import img_service_6 from "/src/assets/images/service-6.jpg";
+import img_service_6 from "/src/assets/images/service-6.png";
 
 import img_service_detail_1 from "/src/assets/images/service-detail/service-1.jpg";
 import img_service_detail_2 from "/src/assets/images/service-detail/service-2.jpg";

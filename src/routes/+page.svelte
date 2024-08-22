@@ -1,10 +1,10 @@
 <script lang="ts">
     import carouselImage_1 from "../assets/images/carousel.jpg";
-    import carouselImage_2 from "../assets/images/carousel-1.jpg";
-    import carouselImage_3 from "../assets/images/carousel-2.jpg";
+    import carouselImage_2 from "../assets/images/container-6.png";
+    import carouselImage_3 from "../assets/images/carousel-2.png";
 
-    import aboutImg_1 from "../assets/images/about-1.jpg";
-    import aboutImg_2 from "../assets/images/about-2.jpg";
+    import aboutImg_1 from "../assets/images/case-study-5.png";
+    import aboutImg_2 from "../assets/images/container-2.png";
     import aboutImg_3 from "../assets/images/about-3.jpg";
 
     import itemImg_1 from "../assets/images/item-1.png";
@@ -16,7 +16,7 @@
     import caseStudy_2 from "../assets/images/case-study-2.jpg";
     import caseStudy_3 from "../assets/images/case-study-3.jpg";
     import caseStudy_4 from "../assets/images/case-study-4.jpg";
-    import caseStudy_5 from "../assets/images/case-study-5.jpg";
+    import caseStudy_5 from "../assets/images/case-study-5.png";
 
     import { translationStore } from "$lib/i18n";
     import ServiceItem from "../components/ServiceItem.svelte";
@@ -56,19 +56,19 @@
     };
 </script>
 <svelte:head>
-  <title>SIL Logistic - Dịch vụ Logistics Toàn Cầu Uy Tín</title>
-  <meta name="description" content="SIL Logistic cung cấp giải pháp vận tải toàn cầu an toàn, nhanh chóng, và hiệu quả. Đảm bảo giao hàng đúng hẹn và tối ưu chi phí cho doanh nghiệp của bạn." />
-  <meta name="keywords" content="SIL Logistic, logistics, dịch vụ vận tải, vận chuyển toàn cầu, giao nhận hàng hóa" />
+  <title>SIL VIETNAM - Dịch vụ Logistics Toàn Cầu Uy Tín</title>
+  <meta name="description" content="SIL VIETNAM cung cấp giải pháp vận tải toàn cầu an toàn, nhanh chóng, và hiệu quả. Đảm bảo giao hàng đúng hẹn và tối ưu chi phí cho doanh nghiệp của bạn." />
+  <meta name="keywords" content="SIL VIETNAM, logistics, dịch vụ vận tải, vận chuyển toàn cầu, giao nhận hàng hóa" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="SIL Logistic - Dịch vụ Logistics Toàn Cầu Uy Tín" />
-  <meta property="og:description" content="Giải pháp logistics toàn cầu từ SIL Logistic, đảm bảo an toàn và tối ưu cho doanh nghiệp." />
+  <meta property="og:title" content="SIL VIETNAM - Dịch vụ Logistics Toàn Cầu Uy Tín" />
+  <meta property="og:description" content="Giải pháp logistics toàn cầu từ SIL VIETNAM, đảm bảo an toàn và tối ưu cho doanh nghiệp." />
   <meta property="og:type" content="website" />
-  <!-- <meta property="og:image" content="https://sil-logistic.com/home-image.jpg" />
-  <meta property="og:url" content="https://sil-logistic.com" /> -->
+  <!-- <meta property="og:image" content="https://sil.com.vn/home-image.jpg" />-->
+  <meta property="og:url" content="https://sil.com.vn" /> 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SIL Logistic - Dịch vụ Logistics Toàn Cầu Uy Tín" />
-  <meta name="twitter:description" content="Giải pháp vận tải hiệu quả từ SIL Logistic, đối tác tin cậy cho doanh nghiệp." />
-  <!-- <meta name="twitter:image" content="https://sil-logistic.com/home-image.jpg" /> -->
+  <meta name="twitter:title" content="SIL VIETNAM - Dịch vụ Logistics Toàn Cầu Uy Tín" />
+  <meta name="twitter:description" content="Giải pháp vận tải hiệu quả từ SIL VIETNAM, đối tác tin cậy cho doanh nghiệp." />
+  <!-- <meta name="twitter:image" content="https://sil.com.vn/home-image.jpg" /> -->
 </svelte:head>
 <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5 section">
@@ -77,7 +77,7 @@
             {#each carousels as item}
                 <SplideSlide>
                     <div class="carousel-item active">
-                        <img src={item.img} alt="SIL logistic" style="width: 100%; height: 100%;  object-fit: cover;">
+                        <img src={item.img} alt="SIL VIETNAM" style="width: 100%; height: 100%;  object-fit: cover;">
                         <div
                             class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
                             style="background: rgba(6, 3, 21, 0.6)"
@@ -298,7 +298,7 @@
         <div class="section-title left case-study-title" data-aos="fade-right">
             <h4 class="subtitle">{_.home_block_4_sub_title}</h4>
             <h2 class="title">
-                {_.home_block_4_title_1} <span>{_.home_block_4_title_2}</span>
+                {_.home_block_4_title_1} {_.home_block_4_title_2}
             </h2>
         </div>
     </div>
@@ -583,7 +583,7 @@
 
     @media (max-width: 767px) {
         h1 {
-            font-size: 4rem !important;
+            font-size: 3rem !important;
         }
         h5 {
             font-size: 1.6rem !important;
@@ -636,7 +636,7 @@
 
     @media only screen and (max-width: 920px) {
         .carousel-item {
-            aspect-ratio: 2;
+            aspect-ratio: 1;
         }
 
         .carousel-content {
@@ -645,5 +645,13 @@
         .common-title-container {
             padding: 3rem 0 2rem 2rem;
         }
+
+        h1 {
+            font-size: 4rem !important;
+        }
+        h5 {
+            font-size: 1.6rem !important;
+        }
     }
+    
 </style>
