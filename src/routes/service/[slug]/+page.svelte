@@ -16,7 +16,7 @@
             const index = $page.url.pathname.lastIndexOf("/");
             url = $page.url.pathname.substring(index + 1);
             serviceItem = services.find(
-                (item: any) => item.slug_vi === url || item.slug_en === url
+                (item: any) => item.slug_vi === url
             );
             if (serviceItem) {
                 const obj = new Object(_[serviceItem.desc]) as any;

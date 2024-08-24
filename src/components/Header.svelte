@@ -44,7 +44,12 @@
             aria-expanded={isNavbarOpen ? "true" : "false"}
             aria-label="Toggle navigation"
         >
-            <span class="navbar-toggler-icon"></span>
+        {#if isNavbarOpen}
+            <i class="bi bi-x toggler-icon"></i>
+            {:else}
+            <i class="bi bi-list toggler-icon"></i>
+        {/if}
+            
         </button>
         <div
             class="collapse navbar-collapse"
@@ -98,8 +103,16 @@
         display: block;
     }
     .navbar-toggler{
+        border: none;
+        background: rgb(164,164,167);
+        background: linear-gradient(90deg, rgba(164,164,167,1) 0%, rgba(0,138,255,1) 13%, rgba(24,183,246,1) 83%);
         &:focus{
             box-shadow: none;
+        }
+        .toggler-icon{
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
         }
     }
     .navbar {
@@ -129,26 +142,6 @@
                 }
             }
         }
-        // .btn-languages {
-        //     border: none;
-        //     background: none;
-        // }
-        // .dropdown-menu {
-        //     border: 0.1rem solid var(--primary-color);
-
-        //     .dropdown-item {
-        //         cursor: pointer;
-        //         font-size: 1.4rem;
-        //         &:hover {
-        //             // background: var(--primary-colors);
-        //             color: var(--primary-color);
-        //         }
-        //     }
-        // }
-        // .dropdown-toggle::after {
-        //     content: "";
-        //     border: none !important;
-        // }
     }
     .d-flex {
         justify-content: end;
@@ -168,7 +161,7 @@
     }
     @media (max-width: 991px) {
         .navbar {
-            min-height: 6rem !important;
+            min-height: 7rem !important;
         }
     }
 </style>

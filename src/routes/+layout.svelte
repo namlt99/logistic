@@ -176,7 +176,7 @@
 
     @media (max-width: 991px) {
         main {
-            margin-top: 6rem;
+            margin-top: 7rem;
         }
     }
     footer {

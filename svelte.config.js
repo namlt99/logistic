@@ -20,10 +20,11 @@ const config = {
 			//split: false
 			pages: 'build',
 			assets: 'build',
-			fallback: null,
-			precompress: false,
-			strict: true
-		})
+			fallback: '404.html'
+		}),
+		prerender: {
+			entries: ['/','/about','/contact','/service']
+		  }
 	},
 };
 

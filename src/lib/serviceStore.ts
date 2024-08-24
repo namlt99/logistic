@@ -21,7 +21,7 @@ const serviceList = [
         description: "service_cart_1_desc",
         desc: "service_1",
         slug_vi: "van-chuyen-duong-bien",
-        slug_en: "sea-freight",
+        // slug_en: "sea-freight",
         img: img_service_1,
         img_detail: img_service_detail_1
     },
@@ -32,7 +32,7 @@ const serviceList = [
         description: "service_cart_2_desc",
         desc: "service_2",
         slug_vi: "van-chuyen-duong-hang-khong",
-        slug_en: "air-freight",
+        // slug_en: "air-freight",
         img: img_service_2,
         img_detail: img_service_detail_2
     },
@@ -44,7 +44,7 @@ const serviceList = [
         desc: "service_3",
         slug_vi:
             "moi-gioi-hai-quan-va-cap-co-giay-chung-nhan-kiem-dich-thuc-vat",
-        slug_en: "custom-brokerage-and-co-phytosanitary-certificate-issuance",
+        // slug_en: "custom-brokerage-and-co-phytosanitary-certificate-issuance",
         img: img_service_3,
         img_detail: img_service_detail_3
     },
@@ -55,7 +55,7 @@ const serviceList = [
         description: "service_cart_4_desc",
         desc: "service_4",
         slug_vi: "kho-hang",
-        slug_en: "Warehousing",
+        // slug_en: "Warehousing",
         img: img_service_4,
         img_detail: img_service_detail_4
     },
@@ -66,7 +66,7 @@ const serviceList = [
         description: "service_cart_5_desc",
         desc: "service_5",
         slug_vi: "dich-vu-xin-giay-chung-nhan-kiem-dich-thuc-vat",
-        slug_en: "phytosanitary-certificate-application-service",
+        // slug_en: "phytosanitary-certificate-application-service",
         img: img_service_5,
         img_detail: img_service_detail_5
     },
@@ -77,7 +77,7 @@ const serviceList = [
         description: "service_cart_6_desc",
         desc: "service_6",
         slug_vi: "van-tai-da-phuong-thuc",
-        slug_en: "multimodal-transport",
+        // slug_en: "multimodal-transport",
         img: img_service_6,
         img_detail: img_service_detail_6
     },

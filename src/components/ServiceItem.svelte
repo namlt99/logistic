@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { currentLocale, translationStore } from "$lib/i18n";
+    import { translationStore } from "$lib/i18n";
     import { servicesStore } from "$lib/serviceStore";
 
     export let id;
@@ -9,11 +9,9 @@
     export let slug_vi: string = "";
     export let icon: string = "";
     export let desc;
-    export let slug_en: string = "";
 
     let _: any;
     $: _ = $translationStore;
-    $: currentLocate = $currentLocale;
 
     let services: any = [];
     $: servicesStore.subscribe((res) => (services = res));
@@ -31,7 +29,7 @@
         </p>
     </div>
     <div class="service-item-footer">
-        <a class="hyper-link" href="/service/{currentLocate === "vi" ? slug_vi : slug_en}">{_.learn_more} <i class="bi bi-chevron-right"></i></a>
+        <a class="hyper-link" href="/service/{slug_vi}">{_.learn_more} <i class="bi bi-chevron-right"></i></a>
     </div>
 </div>
 

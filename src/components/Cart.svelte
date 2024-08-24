@@ -1,19 +1,17 @@
 <script lang="ts">
-    import { currentLocale, translationStore } from "$lib/i18n";
+    import { translationStore } from "$lib/i18n";
 
     export let id;
     export let img;
     export let title: string;
     export let description: string;
     export let slug_vi: string = "";
-    export let slug_en: string = "";
 
     let _: any;
     $: _ = $translationStore;
-    $: currentLocate = $currentLocale;
 </script>
 
-<a href="/service/{currentLocate === 'vi' ? slug_vi : slug_en}">
+<a href="/service/{slug_vi}">
     <div class="cart" data-id={id}>
         <div class="cart-header">
             <h3>{_.service_card_title}</h3>
