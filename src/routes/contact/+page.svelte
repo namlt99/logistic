@@ -1,7 +1,7 @@
 <script lang="ts">
     import { translationStore } from "$lib/i18n";
     const URI =
-        "https://script.google.com/macros/s/AKfycbwJssQrvM69l9DPf-ekABiTXRZXc4Fje34ponZhj1Lew1QrLY-kQD85gHPMtvSaiRnMIA/exec";
+        "https://script.google.com/macros/s/AKfycbyOUM3as5qxLCY9PsTF6HDpkQAT1noaub-ijGdO9AbiuSHjWBntBKGQeIZIp8AdahgBRA/exec";
 
     let _: any;
     $: _ = $translationStore;
@@ -13,6 +13,7 @@
         phone: string;
         email: string;
         message: string;
+        status: string;
     }
 
     let contactForm: Contact;
@@ -29,6 +30,7 @@
             phone: "",
             email: "",
             message: "",
+            status: "chưa xử lý"
         };
     }
 
@@ -84,11 +86,12 @@
                 "Content-Type": "application/json",
             },
         });
-        initForm();
-        alert("Thông tin đã được gửi đi");
-        const result = await response.json();
+        // const result = await response.json();
 
         // console.log(result);
+        initForm();
+        alert("Thông tin đã được gửi đi");
+       
     }
 </script>
 <svelte:head>
