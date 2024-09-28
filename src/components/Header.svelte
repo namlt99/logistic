@@ -4,7 +4,7 @@
     import logo from "../assets/images/logo.png";
     import viImg from "../assets/images/vi.png";
     import enImg from "../assets/images/en.png";
-
+    let fileUrl = '/files/SIL Profile.pdf';
     let _: any;
     $: _ = $translationStore;
 
@@ -26,6 +26,16 @@
     function switchLanguage(lang: string) {
         currentLocale.set(lang);
         handleClick();
+    }
+
+
+    function downloadFile() {
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'SIL profile.pdf';  // Tên file sau khi tải về
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
 </script>
 
@@ -76,6 +86,9 @@
                     <a class="nav-link" href="/contact" on:click={handleClick}
                         >{_.contact}</a
                     >
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link btn-download" on:click={downloadFile}> SIL Profile <i class="bi bi-file-earmark-arrow-down"></i></button>
                 </li>
             </ul>
             <div class="d-flex">
@@ -153,6 +166,11 @@
                 margin-left: 0.5rem;
             }
         }
+    }
+
+    .btn-download{
+        border: none;
+    border-radius: 1rem;
     }
     @media (max-width: 767px) {
         .navbar-nav {
